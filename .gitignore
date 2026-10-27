@@ -1,0 +1,33 @@
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+
+# IDE and Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*.sublime-workspace
+
+# OS Generated
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Nested external repository (managed independently)
+dep_det_pushti/
+
+# Temporary test outputs
+test_dash/

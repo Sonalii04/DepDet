@@ -1,0 +1,38 @@
+{
+  "Uncalibrated": {
+    "validation": {
+      "brier_multiclass": 0.6949,
+      "brier_severe_class4": 0.0449,
+      "log_loss": 1.3552
+    },
+    "test": {
+      "brier_multiclass": 0.685,
+      "brier_severe_class4": 0.0467,
+      "log_loss": 1.3307
+    }
+  },
+  "Platt_Sigmoid": {
+    "validation": {
+      "brier_multiclass": 0.6601,
+      "brier_severe_class4": 0.0376,
+      "log_loss": 1.2564
+    },
+    "test": {
+      "brier_multiclass": 0.6508,
+      "brier_severe_class4": 0.041,
+      "log_loss": 1.2368
+    }
+  },
+  "Isotonic": {
+    "validation": {
+      "brier_multiclass": 0.6564,
+      "brier_severe_class4": 0.0378,
+      "log_loss": 1.2437
+    },
+    "test": {
+      "brier_multiclass": 0.6613,
+      "brier_severe_class4": 0.0408,
+      "log_loss": 1.2845
+    }
+  }
+}

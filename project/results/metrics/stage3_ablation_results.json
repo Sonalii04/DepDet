@@ -1,0 +1,67 @@
+[
+  {
+    "Feature Group": "Actigraphy",
+    "N_Features": 46,
+    "Val Macro-F1": 0.1922936945956272,
+    "Val Bal-Acc": 0.227604655107646,
+    "Val Accuracy": 0.3882279273638071,
+    "Test Macro-F1": 0.18525118906806012,
+    "Test Bal-Acc": 0.2203046623773713,
+    "Test Accuracy": 0.39365079365079364,
+    "Test G-Mean": 0.0,
+    "Test QWK": 0.11180765110646618,
+    "Test Ordinal MAE": 0.9657142857142857
+  },
+  {
+    "Feature Group": "Sleep",
+    "N_Features": 65,
+    "Val Macro-F1": 0.20297377663712704,
+    "Val Bal-Acc": 0.22817307615869636,
+    "Val Accuracy": 0.37319974953036944,
+    "Test Macro-F1": 0.2050195931813405,
+    "Test Bal-Acc": 0.23047412848717758,
+    "Test Accuracy": 0.3968253968253968,
+    "Test G-Mean": 0.09298622811213501,
+    "Test QWK": 0.1405201445628439,
+    "Test Ordinal MAE": 0.9695238095238096
+  },
+  {
+    "Feature Group": "Demographics",
+    "N_Features": 18,
+    "Val Macro-F1": 0.2448135638571371,
+    "Val Bal-Acc": 0.26363608346485384,
+    "Val Accuracy": 0.40200375704445834,
+    "Test Macro-F1": 0.24522183309536466,
+    "Test Bal-Acc": 0.2570655776183105,
+    "Test Accuracy": 0.41079365079365077,
+    "Test G-Mean": 0.15326815572039737,
+    "Test QWK": 0.22648413761557806,
+    "Test Ordinal MAE": 0.9187301587301587
+  },
+  {
+    "Feature Group": "Clinical",
+    "N_Features": 21,
+    "Val Macro-F1": 0.24902714853221575,
+    "Val Bal-Acc": 0.2698675130103447,
+    "Val Accuracy": 0.43832185347526614,
+    "Test Macro-F1": 0.283697248671945,
+    "Test Bal-Acc": 0.28709891985579944,
+    "Test Accuracy": 0.43873015873015875,
+    "Test G-Mean": 0.19128207096838384,
+    "Test QWK": 0.330294460044517,
+    "Test Ordinal MAE": 0.8247619047619048
+  },
+  {
+    "Feature Group": "Combined",
+    "N_Features": 150,
+    "Val Macro-F1": 0.31084587073023867,
+    "Val Bal-Acc": 0.3117367949692479,
+    "Val Accuracy": 0.443331246086412,
+    "Test Macro-F1": 0.3257422819243311,
+    "Test Bal-Acc": 0.3211545337452621,
+    "Test Accuracy": 0.45396825396825397,
+    "Test G-Mean": 0.2562939521024785,
+    "Test QWK": 0.423815234234588,
+    "Test Ordinal MAE": 0.7796825396825396
+  }
+]

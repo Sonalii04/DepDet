@@ -1,0 +1,140 @@
+{
+  "dataset_summary": {
+    "total_rows": 35694,
+    "total_participants": 4948,
+    "has_exact_timestamps": false,
+    "has_daily_measurements": false,
+    "has_weekly_measurements": false,
+    "temporal_structure": "Period-Level Aggregates (12 Monthly Periods; Quarterly PHQ-9 Assessments at Periods 3, 6, 9, 12)",
+    "feasibility_case": "Case C: Only period-level aggregates are available"
+  },
+  "period_breakdown": {
+    "total_rows_by_period": {
+      "1": 3676,
+      "2": 3491,
+      "3": 3244,
+      "4": 3131,
+      "5": 3041,
+      "6": 2832,
+      "7": 2983,
+      "8": 2876,
+      "9": 2732,
+      "10": 2859,
+      "11": 2771,
+      "12": 2058
+    },
+    "labeled_rows_by_period": {
+      "3": 3244,
+      "6": 2832,
+      "9": 2732,
+      "12": 2058
+    },
+    "unlabeled_rows_by_period": {
+      "1": 3676,
+      "2": 3491,
+      "4": 3131,
+      "5": 3041,
+      "7": 2983,
+      "8": 2876,
+      "10": 2859,
+      "11": 2771
+    }
+  },
+  "participant_coverage": {
+    "periods_per_user": {
+      "min": 1,
+      "max": 12,
+      "mean": 7.213823767178658,
+      "median": 8.0,
+      "std": 3.9284014140829324
+    },
+    "labeled_assessments_per_user": {
+      "participants_with_at_least_1": 4036,
+      "participants_with_1": 929,
+      "participants_with_2": 774,
+      "participants_with_3": 943,
+      "participants_with_4": 1390,
+      "participants_with_at_least_2": 3107,
+      "participants_with_at_least_3": 2333
+    }
+  },
+  "longitudinal_transitions": {
+    "total_transitions": 6830,
+    "transitions_by_split": {
+      "train": 4864,
+      "val": 993,
+      "test": 973
+    },
+    "transition_participants_by_split": {
+      "test": 453,
+      "train": 2202,
+      "val": 452
+    },
+    "period_gap_distribution": {
+      "3.0": 6471,
+      "6.0": 293,
+      "9.0": 66
+    },
+    "delta_score_stats": {
+      "mean": -0.05505124450951684,
+      "std": 4.125915736018018,
+      "median": 0.0,
+      "q25": -2.0,
+      "q75": 2.0
+    },
+    "mcid_5pt_distribution": {
+      "counts": {
+        "Stable": 5354,
+        "Improved": 752,
+        "Worsened": 724
+      },
+      "percentages": {
+        "Stable": 78.38945827232796,
+        "Improved": 11.010248901903367,
+        "Worsened": 10.600292825768667
+      }
+    },
+    "category_change_distribution": {
+      "counts": {
+        "Stable": 3900,
+        "Improved": 1501,
+        "Worsened": 1429
+      },
+      "percentages": {
+        "Stable": 57.10102489019033,
+        "Improved": 21.97657393850659,
+        "Worsened": 20.922401171303072
+      }
+    }
+  },
+  "supported_observation_windows": [
+    {
+      "window_id": "W1",
+      "name": "Current-Period Window (W=1)",
+      "duration_periods": 1,
+      "approx_duration_days": 30,
+      "description": "Features from assessment period t only (concurrent digital phenotype)."
+    },
+    {
+      "window_id": "W2",
+      "name": "Bi-Monthly Window (W=2)",
+      "duration_periods": 2,
+      "approx_duration_days": 60,
+      "description": "Features from preceding period (t-1) and assessment period t."
+    },
+    {
+      "window_id": "W3",
+      "name": "Quarterly Assessment-Interval Window (W=3)",
+      "duration_periods": 3,
+      "approx_duration_days": 90,
+      "description": "Full 3-period block [t-2, t-1, t] spanning the entire inter-assessment interval."
+    },
+    {
+      "window_id": "W_all",
+      "name": "Cumulative History Window (W=Full)",
+      "duration_periods": "variable",
+      "approx_duration_days": "up to 360",
+      "description": "All available observation periods from study baseline up to assessment period t."
+    }
+  ]
+}

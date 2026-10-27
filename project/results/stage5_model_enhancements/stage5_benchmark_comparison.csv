@@ -1,0 +1,9 @@
+policy,model_name,val_macro_f1,test_macro_f1,test_bal_acc,test_accuracy,test_qwk,severe_recall,severe_precision,test_score_mae,fit_time_sec
+Policy A (Sensor-Only),XGBoost (Class-Weighted),0.325,0.3118,0.3217,0.4127,0.4737,0.25,0.1978,,23.549
+Policy A (Sensor-Only),XGBoost (Unweighted),0.2815,0.3135,0.3084,0.4533,0.3953,0.1528,0.3929,,23.278
+Policy A (Sensor-Only),HistGradientBoosting (Class-Weighted),0.3218,0.3092,0.3155,0.4083,0.4402,0.2222,0.1928,,19.362
+Policy A (Sensor-Only),"Windowed Fusion GRU (W=1, Stage 4 Selected)",0.3359,0.3065,0.3305,0.3898,0.4313,0.1667,0.3636,4.113,
+Policy A (Sensor-Only),Majority Class Baseline,0.1074,0.1119,0.2,0.3886,0.0,0.0,0.0,,0.001
+Policy B (Prior-PHQ-9-Assisted),XGBoost (Class-Weighted + Prior PHQ-9),0.3976,0.3901,0.3991,0.4851,0.5915,0.3194,0.2805,,29.747
+Policy B (Prior-PHQ-9-Assisted),HistGradientBoosting (+ Prior PHQ-9),0.4033,0.3734,0.3803,0.4667,0.5892,0.3194,0.2875,,4.302
+Clinical Baseline,Clinical Persistence Baseline (y_hat_t = y_{t-1}),0.0,0.481,0.3012,0.5858,0.4257,0.0,0.0,2.9353,

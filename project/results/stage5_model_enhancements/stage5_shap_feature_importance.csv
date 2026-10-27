@@ -1,0 +1,151 @@
+feature,mean_abs_shap_all_classes,mean_abs_shap_severe_class4,domain
+money,0.16877092,0.16869019,Demographics & Socioeconomic
+comorbid_neuropathic,0.11402269,0.10159823,Clinical Comorbidities & Health History
+comorbid_migraines,0.107315786,0.12889925,Clinical Comorbidities & Health History
+num_migraine_days,0.07115033,0.08505997,Clinical Comorbidities & Health History
+educ,0.05875433,0.17154324,Demographics & Socioeconomic
+birthyear,0.054366507,0.019708376,Demographics & Socioeconomic
+med_nonmed_dnu,0.037019063,0.0014443204,Clinical Comorbidities & Health History
+steps__rolling_6_sum__max__intercept,0.031815663,0.06450123,Actigraphy & Physical Activity
+bmi,0.030847935,0.026719376,Demographics & Socioeconomic
+height,0.02891903,0.050819352,Demographics & Socioeconomic
+sleep__main_start_hour_adj__intercept,0.02870427,0.016247705,Sleep & Circadian
+sleep_ratio_asleep_in_bed_weekday_mean,0.02743966,0.04866338,Sleep & Circadian
+steps__streaks__countDistinct__intercept,0.026626613,0.019067017,Actigraphy & Physical Activity
+comorbid_arthritis,0.023661613,0.004779299,Clinical Comorbidities & Health History
+steps_rolling_6_max_recent,0.021007814,0.016048765,Actigraphy & Physical Activity
+steps__not_moving__sum__intercept,0.020536842,0.012220079,Actigraphy & Physical Activity
+sleep__main_start_hour_adj__score,0.020404687,0.013675695,Sleep & Circadian
+steps__light_activity__sum__coeff,0.02039557,0.030494029,Actigraphy & Physical Activity
+steps_rolling_6_median_recent,0.020220151,0.051492795,Actigraphy & Physical Activity
+weight,0.020071123,0.038316954,Demographics & Socioeconomic
+trauma,0.01993509,0.04877944,Clinical Comorbidities & Health History
+sleep__awake_regions__countDistinct__intercept,0.019048296,0.05092092,Sleep & Circadian
+steps__light_activity__sum__intercept,0.0189716,0.030448617,Actigraphy & Physical Activity
+sleep_asleep_weekend_mean,0.018449819,0.017466333,Sleep & Circadian
+sleep_main_start_hour_adj_range,0.018116416,0.011811241,Sleep & Circadian
+steps__light_activity__sum__score,0.01786249,0.04435412,Actigraphy & Physical Activity
+sleep__awake_regions__countDistinct__score,0.017799687,0.018932601,Sleep & Circadian
+steps__awake__sum__intercept,0.017666632,0.018733267,Actigraphy & Physical Activity
+sleep__nap_count__coeff,0.017538406,0.016352342,Sleep & Circadian
+sleep__awake__sum__score,0.017445406,0.026735323,Sleep & Circadian
+sleep__nap_count__intercept,0.017300941,0.0058599235,Sleep & Circadian
+sex,0.016994098,0.0,Demographics & Socioeconomic
+steps__streaks__countDistinct__score,0.016763447,0.02672238,Actigraphy & Physical Activity
+steps_lpa_sum_recent,0.016572908,0.008057007,Actigraphy & Physical Activity
+sleep_in_bed_weekend_mean,0.016283117,0.020457614,Sleep & Circadian
+sleep__nap_count__score,0.016071705,0.052532736,Sleep & Circadian
+sleep__total_in_bed_minutes__coeff,0.015915472,0.035202768,Sleep & Circadian
+money_assistance,0.01526193,0.061374534,Demographics & Socioeconomic
+steps_awake_mean,0.015150374,0.016267655,Actigraphy & Physical Activity
+steps__not_moving__sum__score,0.01509414,0.021810424,Actigraphy & Physical Activity
+med_start,0.015001222,0.0008254351,Clinical Comorbidities & Health History
+med_dose,0.014759597,0.03705415,Clinical Comorbidities & Health History
+sleep__main_efficiency__intercept,0.014681229,0.024074102,Sleep & Circadian
+sleep_in_bed_iqr,0.014394186,0.038022257,Sleep & Circadian
+steps__mvpa__sum__intercept,0.014372563,0.014038553,Actigraphy & Physical Activity
+sleep__total_asleep_minutes__intercept,0.014299678,0.012785193,Sleep & Circadian
+sleep__total_asleep_minutes__score_,0.014200103,0.043011904,Sleep & Circadian
+sleep_asleep_iqr,0.014075961,0.018616104,Sleep & Circadian
+sleep__awake_regions__countDistinct__coeff,0.013693392,0.014278088,Sleep & Circadian
+sleep_ratio_asleep_in_bed__score,0.013527859,0.028426427,Sleep & Circadian
+steps__rolling_6_sum__max__score,0.012915354,0.017811254,Actigraphy & Physical Activity
+steps__rolling_6_sum__max__intercept_,0.012855589,0.014633889,Actigraphy & Physical Activity
+steps__light_activity__sum__score_,0.012631351,0.025987258,Actigraphy & Physical Activity
+sleep_ratio_asleep_in_bed_mean_recent,0.012367814,0.01272159,Sleep & Circadian
+sleep_ratio_asleep_in_bed__intercept,0.012351831,0.020584343,Sleep & Circadian
+household,0.012300061,0.025737122,Demographics & Socioeconomic
+steps__not_moving__sum__coeff,0.01229748,0.011029268,Actigraphy & Physical Activity
+sleep__total_asleep_minutes__coeff,0.012229309,0.033191126,Sleep & Circadian
+steps__streaks__countDistinct__coeff,0.012063456,0.01833486,Actigraphy & Physical Activity
+steps_lpa_iqr,0.012038137,0.017722987,Actigraphy & Physical Activity
+steps__rolling_6_sum__max__coeff,0.012012482,0.018721443,Actigraphy & Physical Activity
+steps__not_moving__sum__score_,0.011939859,0.008619035,Actigraphy & Physical Activity
+steps__awake__sum__score,0.011814146,0.0111194365,Actigraphy & Physical Activity
+sleep__awake__sum__intercept,0.011784311,0.036175724,Sleep & Circadian
+steps__light_activity__sum__coeff_,0.011527437,0.016424496,Actigraphy & Physical Activity
+sleep__main_efficiency__score,0.011480783,0.019662725,Sleep & Circadian
+sleep__main_start_hour_adj__score_,0.011188182,0.019500777,Sleep & Circadian
+sleep_ratio_asleep_in_bed_weekend_mean,0.011174405,0.013340653,Sleep & Circadian
+sleep_in_bed_mean_recent,0.010995098,0.019001957,Sleep & Circadian
+steps__not_moving__sum__coeff_,0.010589089,0.009460402,Actigraphy & Physical Activity
+steps__mvpa__sum__score,0.010562126,0.0147478795,Actigraphy & Physical Activity
+steps__awake__sum__coeff,0.010403301,0.016175894,Actigraphy & Physical Activity
+sleep_asleep_mean_recent,0.010383661,0.011225327,Sleep & Circadian
+steps__awake__sum__score_,0.010342827,0.005169019,Actigraphy & Physical Activity
+steps__mvpa__sum__coeff,0.010287733,0.012656628,Actigraphy & Physical Activity
+steps_mvpa_sum_recent,0.009973026,0.015024963,Actigraphy & Physical Activity
+sleep__awake__sum__coeff,0.009955934,0.011392624,Sleep & Circadian
+sleep__total_in_bed_minutes__intercept,0.009860337,0.011716668,Sleep & Circadian
+sleep__total_in_bed_minutes__score,0.00940314,0.0075160824,Sleep & Circadian
+sleep__total_asleep_minutes__score,0.009276935,0.015367347,Sleep & Circadian
+sleep_ratio_asleep_in_bed__score_,0.009240149,0.010224521,Sleep & Circadian
+steps__streaks__countDistinct__score_,0.009222351,0.0081058685,Actigraphy & Physical Activity
+steps__not_moving__sum__intercept_,0.0091217635,0.00667634,Actigraphy & Physical Activity
+sleep__main_start_hour_adj__coeff,0.00910113,0.014980355,Sleep & Circadian
+sleep_asleep_weekday_mean,0.009076559,0.0071510645,Sleep & Circadian
+steps__rolling_6_sum__max__score_,0.008993376,0.0073185973,Actigraphy & Physical Activity
+sleep__total_asleep_minutes__intercept_,0.008913914,0.017876113,Sleep & Circadian
+sleep_in_bed_weekday_mean,0.008868185,0.011818148,Sleep & Circadian
+sleep__main_efficiency__coeff,0.008536641,0.0053929863,Sleep & Circadian
+sleep_ratio_asleep_in_bed__coeff,0.008513624,0.0113304,Sleep & Circadian
+sleep__total_in_bed_minutes__intercept_,0.008386583,0.012152783,Sleep & Circadian
+sleep__total_in_bed_minutes__score_,0.008303199,0.014478881,Sleep & Circadian
+steps__streaks__countDistinct__coeff_,0.008227642,0.007279386,Actigraphy & Physical Activity
+steps__light_activity__sum__intercept_,0.008199888,0.008239998,Actigraphy & Physical Activity
+sleep_main_start_hour_adj_median,0.008155046,0.006251741,Sleep & Circadian
+sleep__main_efficiency__score_,0.008086321,0.008707527,Sleep & Circadian
+steps__active_day_count_,0.008072546,0.009906014,Actigraphy & Physical Activity
+steps__awake__sum__coeff_,0.007864294,0.013056939,Actigraphy & Physical Activity
+steps__mvpa__sum__coeff_,0.007823102,0.0035585072,Actigraphy & Physical Activity
+sleep__awake_regions__countDistinct__score_,0.0077251727,0.0071968716,Sleep & Circadian
+steps__rolling_6_sum__max__coeff_,0.007444225,0.010831039,Actigraphy & Physical Activity
+sleep_ratio_asleep_in_bed_iqr,0.007322676,0.005534746,Sleep & Circadian
+steps__streaks__countDistinct__intercept_,0.007074757,0.0056658285,Actigraphy & Physical Activity
+sleep__nap_count__intercept_,0.007004486,0.004323996,Sleep & Circadian
+sleep__nap_count__score_,0.006793125,0.00463272,Sleep & Circadian
+sleep__total_in_bed_minutes__coeff_,0.0067078215,0.021170385,Sleep & Circadian
+steps__sedentary_day_count_,0.0066671525,0.00147108,Actigraphy & Physical Activity
+steps__awake__sum__intercept_,0.006666121,0.007889776,Actigraphy & Physical Activity
+steps_awake_sum_iqr,0.006658084,0.0054453737,Actigraphy & Physical Activity
+sleep__total_asleep_minutes__coeff_,0.006584582,0.020263417,Sleep & Circadian
+sleep__main_start_hour_adj__intercept_,0.0064756814,0.010926188,Sleep & Circadian
+sleep__awake__sum__score_,0.006381209,0.014322498,Sleep & Circadian
+sleep__awake_regions__countDistinct__intercept_,0.0059853955,0.004486388,Sleep & Circadian
+sleep__hyposomnia_count_,0.005687019,0.008856598,Sleep & Circadian
+steps__mvpa__sum__score_,0.00560445,0.008178731,Actigraphy & Physical Activity
+meds_migraine,0.0054538245,0.023296405,Clinical Comorbidities & Health History
+steps__mvpa__sum__intercept_,0.005334761,0.0058400547,Actigraphy & Physical Activity
+sleep_ratio_asleep_in_bed__coeff_,0.005317962,0.0013233599,Sleep & Circadian
+life_activity_eating,0.00519496,0.0003286898,Clinical Comorbidities & Health History
+sleep__awake__sum__coeff_,0.005179194,0.0052880915,Sleep & Circadian
+sleep__main_start_hour_adj__coeff_,0.005075813,0.008166041,Sleep & Circadian
+sleep__awake_regions__countDistinct__coeff_,0.0047601582,0.0019697119,Sleep & Circadian
+race_black,0.0044618435,0.0003220057,Clinical Comorbidities & Health History
+sleep__main_efficiency__intercept_,0.004449272,0.0029322237,Sleep & Circadian
+race_white,0.004278632,0.00063384825,Clinical Comorbidities & Health History
+sleep_ratio_asleep_in_bed__intercept_,0.0041414234,0.00820457,Sleep & Circadian
+sleep__hypersomnia_count_,0.0039510042,0.007559171,Sleep & Circadian
+race_hispanic,0.0037182146,0.0013896516,Clinical Comorbidities & Health History
+sleep__awake__sum__intercept_,0.0035790873,0.00339173,Sleep & Circadian
+sleep__main_efficiency__coeff_,0.003382376,0.0010752055,Sleep & Circadian
+steps_mvpa_iqr,0.003195103,0.0031834375,Actigraphy & Physical Activity
+med_stop,0.002714848,0.0004057201,Clinical Comorbidities & Health History
+life_meditation,0.002276757,0.0,Clinical Comorbidities & Health History
+nonmed_start,0.002025936,0.0068041626,Clinical Comorbidities & Health History
+sleep__nap_count__coeff_,0.0016281754,0.0026768597,Sleep & Circadian
+life_stress,0.001562634,0.0,Clinical Comorbidities & Health History
+sleep_main_start_hour_adj_iqr,0.0013852664,0.0010188018,Sleep & Circadian
+comorbid_cancer,0.0012721423,0.0037323758,Clinical Comorbidities & Health History
+insurance,0.0012628095,0.00042969413,Demographics & Socioeconomic
+birth,0.0010932151,0.00093799963,Demographics & Socioeconomic
+comorbid_ms,0.0009831499,0.0,Clinical Comorbidities & Health History
+nonmed_stop,0.0009597421,0.001436199,Clinical Comorbidities & Health History
+race_other,0.0007676407,0.0012257945,Clinical Comorbidities & Health History
+comorbid_gout,0.00072911615,0.0006243487,Clinical Comorbidities & Health History
+comorbid_diabetes_typ2,0.00030111062,0.0007128961,Clinical Comorbidities & Health History
+life_red_stop_alcoh,0.00018042211,0.0002180967,Clinical Comorbidities & Health History
+race_asian,0.00016959198,0.0,Clinical Comorbidities & Health History
+comorbid_osteoporosis,0.00013865896,0.0,Clinical Comorbidities & Health History
+pregnant,6.5384025e-05,0.0,Demographics & Socioeconomic
+comorbid_diabetes_typ1,0.0,0.0,Clinical Comorbidities & Health History

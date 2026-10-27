@@ -1,0 +1,62 @@
+[
+  {
+    "Model": "Longitudinal Current Only",
+    "Evaluation Population": "Matched Cohort (history_len >= 1)",
+    "N_Samples": 1523,
+    "N_Participants": 578,
+    "Macro-F1": 0.3472107509431406,
+    "Balanced Accuracy": 0.34112681570990516,
+    "Accuracy": 0.45436638214051217,
+    "G-Mean": 0.2944209804103784,
+    "QWK": 0.4585073869371957,
+    "Ordinal MAE": 0.7708470124753776
+  },
+  {
+    "Model": "Longitudinal History Only",
+    "Evaluation Population": "Matched Cohort (history_len >= 1)",
+    "N_Samples": 1523,
+    "N_Participants": 578,
+    "Macro-F1": 0.3121296890530837,
+    "Balanced Accuracy": 0.30118112361366844,
+    "Accuracy": 0.40840446487196325,
+    "G-Mean": 0.25691002962279375,
+    "QWK": 0.42567857232278505,
+    "Ordinal MAE": 0.7925147734734077
+  },
+  {
+    "Model": "Longitudinal Current+History Fusion",
+    "Evaluation Population": "Matched Cohort (history_len >= 1)",
+    "N_Samples": 1523,
+    "N_Participants": 578,
+    "Macro-F1": 0.30519606170800273,
+    "Balanced Accuracy": 0.31010268776643446,
+    "Accuracy": 0.4458305975049245,
+    "G-Mean": 0.17892314328842898,
+    "QWK": 0.429117625009371,
+    "Ordinal MAE": 0.7655942219304005
+  },
+  {
+    "Model": "Longitudinal Current Only",
+    "Evaluation Population": "Full Cohort (All Periods)",
+    "N_Samples": 1575,
+    "N_Participants": 602,
+    "Macro-F1": 0.34370962695043716,
+    "Balanced Accuracy": 0.338930285774517,
+    "Accuracy": 0.4533333333333333,
+    "G-Mean": 0.2907108502654639,
+    "QWK": 0.46065030745538027,
+    "Ordinal MAE": 0.7733333333333333
+  },
+  {
+    "Model": "Longitudinal Current+History Fusion",
+    "Evaluation Population": "Full Cohort (All Periods)",
+    "N_Samples": 1575,
+    "N_Participants": 602,
+    "Macro-F1": 0.30372065719491237,
+    "Balanced Accuracy": 0.3089128910603128,
+    "Accuracy": 0.4444444444444444,
+    "G-Mean": 0.1768669624447928,
+    "QWK": 0.4301534567594376,
+    "Ordinal MAE": 0.7676190476190476
+  }
+]

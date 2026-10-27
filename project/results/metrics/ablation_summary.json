@@ -1,0 +1,90 @@
+{
+  "E1_Baseline": {
+    "name": "Baseline (MLP)",
+    "val_macro_f1": 0.3427252403766341,
+    "val_mae": 3.946036212505515,
+    "test_macro_f1": 0.3150331138077654,
+    "test_accuracy": 0.4526984126984127,
+    "test_balanced_acc": 0.31267763684135813,
+    "test_mae": 3.9412761016875977,
+    "test_rmse": 5.129061203253919,
+    "test_r2": 0.2347470792263906
+  },
+  "E2_Baseline_Contrastive": {
+    "name": "Baseline + Contrastive Learning",
+    "val_macro_f1": 0.29009739021318925,
+    "val_mae": 3.8635459740458984,
+    "test_macro_f1": 0.29562517538896016,
+    "test_accuracy": 0.446984126984127,
+    "test_balanced_acc": 0.30600633108838105,
+    "test_mae": 3.967064503033956,
+    "test_rmse": 5.171192550441975,
+    "test_r2": 0.2221235001935269
+  },
+  "E3_Baseline_LatentOversampling": {
+    "name": "Baseline + Latent Oversampling",
+    "val_macro_f1": 0.28387535206403014,
+    "val_mae": 3.946036212505515,
+    "test_macro_f1": 0.30043965524435107,
+    "test_accuracy": 0.38031746031746033,
+    "test_balanced_acc": 0.3316328494700434,
+    "test_mae": 3.9412761016875977,
+    "test_rmse": 5.129061203253919,
+    "test_r2": 0.2347470792263906
+  },
+  "E4_Contrastive_LatentOversampling": {
+    "name": "Contrastive + Latent Oversampling",
+    "val_macro_f1": 0.29192705153207105,
+    "val_mae": 3.8635459740458984,
+    "test_macro_f1": 0.32043646091851674,
+    "test_accuracy": 0.37777777777777777,
+    "test_balanced_acc": 0.3356958446175973,
+    "test_mae": 3.967064503033956,
+    "test_rmse": 5.171192550441975,
+    "test_r2": 0.2221235001935269
+  },
+  "E5_Current_Only": {
+    "name": "Current Assessment Only",
+    "val_macro_f1": 0.33370962695043715,
+    "val_mae": 4.086043453216552,
+    "test_macro_f1": 0.34370962695043716,
+    "test_accuracy": 0.4533333333333333,
+    "test_balanced_acc": 0.338930285774517,
+    "test_mae": 3.9860434532165527,
+    "test_rmse": 5.231131076812744,
+    "test_r2": 0.2039865255355835
+  },
+  "E6_History_Only": {
+    "name": "History Model Only",
+    "val_macro_f1": 0.3021296890530837,
+    "val_mae": 4.456337547302246,
+    "test_macro_f1": 0.3121296890530837,
+    "test_accuracy": 0.40840446487196325,
+    "test_balanced_acc": 0.30118112361366844,
+    "test_mae": 4.356337547302246,
+    "test_rmse": 5.619251251220703,
+    "test_r2": 0.08071553707122803
+  },
+  "E7_Current_Plus_History": {
+    "name": "Current + History",
+    "val_macro_f1": 0.3137206571949124,
+    "val_mae": 3.9690572738647463,
+    "test_macro_f1": 0.30372065719491237,
+    "test_accuracy": 0.4444444444444444,
+    "test_balanced_acc": 0.3089128910603128,
+    "test_mae": 4.019057273864746,
+    "test_rmse": 5.292490482330322,
+    "test_r2": 0.185202956199646
+  },
+  "E8_Full_Proposed_Model": {
+    "name": "Full Proposed Model",
+    "val_macro_f1": 0.31649536479173973,
+    "val_mae": 3.948700189590454,
+    "test_macro_f1": 0.30450955208638725,
+    "test_accuracy": 0.4450793650793651,
+    "test_balanced_acc": 0.3090075574817433,
+    "test_mae": 3.907965660095215,
+    "test_rmse": 5.162192344665527,
+    "test_r2": 0.22482889890670776
+  }
+}

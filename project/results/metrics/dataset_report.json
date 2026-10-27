@@ -1,0 +1,67 @@
+{
+  "summary": {
+    "total_rows": 35694,
+    "total_columns": 156,
+    "num_participants": 4948,
+    "min_period": 1,
+    "max_period": 12,
+    "speech_text_modality_exists": false,
+    "speech_text_columns": [],
+    "num_features": 150,
+    "numerical_features_count": 150,
+    "categorical_features_count": 0,
+    "labeled_phq_rows": 10866,
+    "unlabeled_phq_rows": 24828
+  },
+  "missing_tiers": {
+    "tier1_complete_0pct": 39,
+    "tier2_high_quality_under_5pct": 78,
+    "tier3_moderate_5_to_30pct": 44,
+    "tier4_sparse_30_to_70pct": 24,
+    "tier5_very_sparse_over_70pct": 4
+  },
+  "split_stats": {
+    "train": {
+      "split": "train",
+      "total_rows": 25277,
+      "num_participants": 3463,
+      "labeled_rows": 7694,
+      "unlabeled_rows": 17583,
+      "class_distribution_labeled": {
+        "0": 3004,
+        "1": 2268,
+        "2": 1321,
+        "3": 717,
+        "4": 384
+      }
+    },
+    "val": {
+      "split": "val",
+      "total_rows": 5217,
+      "num_participants": 742,
+      "labeled_rows": 1597,
+      "unlabeled_rows": 3620,
+      "class_distribution_labeled": {
+        "0": 586,
+        "1": 486,
+        "2": 323,
+        "3": 136,
+        "4": 66
+      }
+    },
+    "test": {
+      "split": "test",
+      "total_rows": 5200,
+      "num_participants": 743,
+      "labeled_rows": 1575,
+      "unlabeled_rows": 3625,
+      "class_distribution_labeled": {
+        "0": 612,
+        "1": 466,
+        "2": 297,
+        "3": 128,
+        "4": 72
+      }
+    }
+  }
+}

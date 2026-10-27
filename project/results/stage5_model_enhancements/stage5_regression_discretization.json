@@ -1,0 +1,38 @@
+{
+  "XGBoost_Regressor": {
+    "fit_time_sec": 1.444,
+    "continuous_metrics": {
+      "val_score_mae": 3.9214,
+      "test_score_mae": 3.9147,
+      "val_score_rmse": 5.0083,
+      "test_score_rmse": 4.9849
+    },
+    "discretized_test_summary": {
+      "macro_f1": 0.2857,
+      "balanced_accuracy": 0.2914,
+      "accuracy": 0.4216,
+      "qwk": 0.4451,
+      "ordinal_mae": 0.72,
+      "severe_recall": 0.0,
+      "extreme_errors_test": 28
+    }
+  },
+  "HistGradientBoosting_Regressor": {
+    "fit_time_sec": 0.825,
+    "continuous_metrics": {
+      "val_score_mae": 3.9345,
+      "test_score_mae": 3.9143,
+      "val_score_rmse": 5.0042,
+      "test_score_rmse": 4.9871
+    },
+    "discretized_test_summary": {
+      "macro_f1": 0.2886,
+      "balanced_accuracy": 0.2935,
+      "accuracy": 0.4241,
+      "qwk": 0.4405,
+      "ordinal_mae": 0.7175,
+      "severe_recall": 0.0,
+      "extreme_errors_test": 32
+    }
+  }
+}

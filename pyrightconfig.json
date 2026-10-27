@@ -1,0 +1,23 @@
+{
+  "executionEnvironments": [
+    {
+      "root": "project",
+      "extraPaths": [
+        "src",
+        "."
+      ]
+    },
+    {
+      "root": ".",
+      "extraPaths": [
+        "project/src",
+        "project"
+      ]
+    }
+  ],
+  "extraPaths": [
+    "project/src",
+    "project",
+    "src"
+  ]
+}

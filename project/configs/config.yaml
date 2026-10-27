@@ -1,0 +1,31 @@
+seed: 42
+data_path: "d:/projects/DepDet/anon_processed_df_parquet"
+output_dir: "d:/projects/DepDet/project"
+
+split:
+  train_ratio: 0.70
+  val_ratio: 0.15
+  test_ratio: 0.15
+
+training:
+  batch_size: 128
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  epochs: 100
+  patience: 15
+
+contrastive:
+  lambda_contrastive: 0.2
+  temperature: 0.07
+  projection_dim: 64
+
+multitask:
+  lambda_severity: 1.0
+  lambda_phq: 0.5
+  lambda_change: 0.5
+  lambda_contrastive: 0.2
+
+architecture:
+  hidden_dim: 128
+  latent_dim: 64
+  num_classes: 5

@@ -1,0 +1,203 @@
+{
+  "true_positive_severe_alert": {
+    "case_type": "True Positive Severe Alert",
+    "true_severity_tier": 4,
+    "predicted_severity_tier": 4,
+    "top_10_driving_features": [
+      {
+        "feature": "money",
+        "feature_value_scaled": 3.9007,
+        "shap_impact_on_severe": 0.6438,
+        "domain": "Demographics & Socioeconomic"
+      },
+      {
+        "feature": "money_assistance",
+        "feature_value_scaled": 2.4628,
+        "shap_impact_on_severe": 0.1844,
+        "domain": "Demographics & Socioeconomic"
+      },
+      {
+        "feature": "comorbid_migraines",
+        "feature_value_scaled": -0.7532,
+        "shap_impact_on_severe": -0.1269,
+        "domain": "Clinical Comorbidities & Health History"
+      },
+      {
+        "feature": "comorbid_neuropathic",
+        "feature_value_scaled": 1.2727,
+        "shap_impact_on_severe": 0.1256,
+        "domain": "Clinical Comorbidities & Health History"
+      },
+      {
+        "feature": "sleep__awake__sum__score",
+        "feature_value_scaled": 1.5309,
+        "shap_impact_on_severe": -0.1037,
+        "domain": "Sleep & Circadian"
+      },
+      {
+        "feature": "educ",
+        "feature_value_scaled": -0.3413,
+        "shap_impact_on_severe": 0.0938,
+        "domain": "Demographics & Socioeconomic"
+      },
+      {
+        "feature": "steps__streaks__countDistinct__score_",
+        "feature_value_scaled": 1.9071,
+        "shap_impact_on_severe": -0.0794,
+        "domain": "Actigraphy & Physical Activity"
+      },
+      {
+        "feature": "sleep__awake_regions__countDistinct__intercept",
+        "feature_value_scaled": 0.9743,
+        "shap_impact_on_severe": 0.0737,
+        "domain": "Sleep & Circadian"
+      },
+      {
+        "feature": "num_migraine_days",
+        "feature_value_scaled": -0.353,
+        "shap_impact_on_severe": -0.0636,
+        "domain": "Clinical Comorbidities & Health History"
+      },
+      {
+        "feature": "steps__not_moving__sum__coeff_",
+        "feature_value_scaled": -2.3943,
+        "shap_impact_on_severe": -0.0544,
+        "domain": "Actigraphy & Physical Activity"
+      }
+    ]
+  },
+  "false_positive_severe_alert": {
+    "case_type": "False Positive Severe Alert",
+    "true_severity_tier": 0,
+    "predicted_severity_tier": 4,
+    "top_10_driving_features": [
+      {
+        "feature": "sleep__total_in_bed_minutes__coeff_",
+        "feature_value_scaled": 3.8373,
+        "shap_impact_on_severe": 0.2666,
+        "domain": "Sleep & Circadian"
+      },
+      {
+        "feature": "comorbid_migraines",
+        "feature_value_scaled": 1.3277,
+        "shap_impact_on_severe": 0.2253,
+        "domain": "Clinical Comorbidities & Health History"
+      },
+      {
+        "feature": "steps__rolling_6_sum__max__intercept",
+        "feature_value_scaled": -2.0322,
+        "shap_impact_on_severe": 0.1066,
+        "domain": "Actigraphy & Physical Activity"
+      },
+      {
+        "feature": "money_assistance",
+        "feature_value_scaled": 2.4628,
+        "shap_impact_on_severe": 0.1013,
+        "domain": "Demographics & Socioeconomic"
+      },
+      {
+        "feature": "num_migraine_days",
+        "feature_value_scaled": -0.353,
+        "shap_impact_on_severe": -0.0872,
+        "domain": "Clinical Comorbidities & Health History"
+      },
+      {
+        "feature": "sleep__total_asleep_minutes__coeff_",
+        "feature_value_scaled": 4.128,
+        "shap_impact_on_severe": 0.0843,
+        "domain": "Sleep & Circadian"
+      },
+      {
+        "feature": "money",
+        "feature_value_scaled": 0.4687,
+        "shap_impact_on_severe": -0.0843,
+        "domain": "Demographics & Socioeconomic"
+      },
+      {
+        "feature": "comorbid_neuropathic",
+        "feature_value_scaled": -0.5016,
+        "shap_impact_on_severe": -0.0614,
+        "domain": "Clinical Comorbidities & Health History"
+      },
+      {
+        "feature": "educ",
+        "feature_value_scaled": 0.3709,
+        "shap_impact_on_severe": 0.0596,
+        "domain": "Demographics & Socioeconomic"
+      },
+      {
+        "feature": "weight",
+        "feature_value_scaled": -0.1769,
+        "shap_impact_on_severe": -0.0565,
+        "domain": "Demographics & Socioeconomic"
+      }
+    ]
+  },
+  "false_negative_missed_severe": {
+    "case_type": "False Negative Missed Severe",
+    "true_severity_tier": 4,
+    "predicted_severity_tier": 1,
+    "top_10_driving_features": [
+      {
+        "feature": "educ",
+        "feature_value_scaled": 1.083,
+        "shap_impact_on_severe": -0.5585,
+        "domain": "Demographics & Socioeconomic"
+      },
+      {
+        "feature": "money",
+        "feature_value_scaled": -0.6754,
+        "shap_impact_on_severe": -0.1674,
+        "domain": "Demographics & Socioeconomic"
+      },
+      {
+        "feature": "comorbid_migraines",
+        "feature_value_scaled": 1.3277,
+        "shap_impact_on_severe": 0.1562,
+        "domain": "Clinical Comorbidities & Health History"
+      },
+      {
+        "feature": "sleep__awake_regions__countDistinct__score",
+        "feature_value_scaled": 2.8528,
+        "shap_impact_on_severe": 0.1083,
+        "domain": "Sleep & Circadian"
+      },
+      {
+        "feature": "num_migraine_days",
+        "feature_value_scaled": -0.353,
+        "shap_impact_on_severe": -0.0881,
+        "domain": "Clinical Comorbidities & Health History"
+      },
+      {
+        "feature": "sleep__main_start_hour_adj__coeff_",
+        "feature_value_scaled": -2.472,
+        "shap_impact_on_severe": 0.0545,
+        "domain": "Sleep & Circadian"
+      },
+      {
+        "feature": "steps__rolling_6_sum__max__intercept",
+        "feature_value_scaled": -1.3353,
+        "shap_impact_on_severe": 0.0534,
+        "domain": "Actigraphy & Physical Activity"
+      },
+      {
+        "feature": "sleep_ratio_asleep_in_bed__score",
+        "feature_value_scaled": -0.6892,
+        "shap_impact_on_severe": -0.043,
+        "domain": "Sleep & Circadian"
+      },
+      {
+        "feature": "sleep__awake_regions__countDistinct__coeff",
+        "feature_value_scaled": -1.5854,
+        "shap_impact_on_severe": 0.0421,
+        "domain": "Sleep & Circadian"
+      },
+      {
+        "feature": "steps__streaks__countDistinct__coeff",
+        "feature_value_scaled": -0.8587,
+        "shap_impact_on_severe": 0.0403,
+        "domain": "Actigraphy & Physical Activity"
+      }
+    ]
+  }
+}
