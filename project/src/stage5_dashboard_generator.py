@@ -1001,13 +1001,14 @@ def generate_interactive_dashboard(stage5_results: dict, output_dir: Path):
         btnElem.classList.add('active');
       }}
 
-      if (!STAGE5_DATA.shap || !STAGE5_DATA.shap.local_explanations) return;
+      const localCases = (STAGE5_DATA.shap && (STAGE5_DATA.shap.local_cases || STAGE5_DATA.shap.local_explanations));
+      if (!localCases) return;
       const keyMap = {{
         'tp': 'true_positive_severe_alert',
         'fp': 'false_positive_severe_alert',
         'fn': 'false_negative_missed_severe'
       }};
-      const caseData = STAGE5_DATA.shap.local_explanations[keyMap[caseKey]];
+      const caseData = localCases[keyMap[caseKey]];
       if (!caseData) return;
 
       document.getElementById('shap-case-type').innerText = caseData.case_type;
@@ -1017,7 +1018,7 @@ def generate_interactive_dashboard(stage5_results: dict, output_dir: Path):
       const container = document.getElementById('shap-waterfall-rows');
       container.innerHTML = '';
 
-      const features = caseData.top_10_driving_features;
+      const features = caseData.top_10_driving_features || [];
       let maxImpact = 0.3;
       features.forEach(f => {{
         if (Math.abs(f.shap_impact_on_severe) > maxImpact) maxImpact = Math.abs(f.shap_impact_on_severe);
