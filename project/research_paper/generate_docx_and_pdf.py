@@ -254,8 +254,16 @@ def generate_docx():
 # ==============================================================================
 def generate_pdf():
     print("Generating PDF...")
+    target_pdf = PDF_PATH
+    try:
+        with open(target_pdf, "ab"):
+            pass
+    except (PermissionError, OSError):
+        target_pdf = PAPER_DIR / "research_paper_v2.pdf"
+        print(f"Notice: research_paper.pdf is open in another viewer. Writing to {target_pdf.name}")
+
     doc = SimpleDocTemplate(
-        str(PDF_PATH),
+        str(target_pdf),
         pagesize=letter,
         leftMargin=45,
         rightMargin=45,
@@ -508,7 +516,7 @@ def generate_pdf():
         i += 1
 
     doc.build(story)
-    print(f"PDF created successfully at: {PDF_PATH}")
+    print(f"PDF created successfully at: {target_pdf}")
 
 
 if __name__ == "__main__":
