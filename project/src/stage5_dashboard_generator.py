@@ -813,9 +813,72 @@ def generate_interactive_dashboard(stage5_results: dict, output_dir: Path):
 
     <!-- TAB 6: SHAP & EXPLANATIONS -->
     <div id="shap" class="tab-pane">
+      
+      <!-- HERO EXPLANATION: WHAT IS SHAP -->
+      <div class="card" style="margin-bottom:24px; background:linear-gradient(135deg, rgba(24,34,56,0.95) 0%, rgba(19,28,46,0.95) 100%); border-color:rgba(59,130,246,0.3);">
+        <span class="badge badge-purple" style="margin-bottom:8px;">Model Interpretability & Audit Trail</span>
+        <h2 style="font-size:1.35rem; color:#fff; margin-bottom:8px;">TreeSHAP: The Mathematical "Receipt" Behind Every Decision</h2>
+        <p style="color:var(--text-secondary); font-size:0.9rem; max-width:900px; line-height:1.6;">
+          In complex machine learning models (like XGBoost with 150 features across hundreds of decision trees), clinicians cannot blindly trust a black-box probability. 
+          <strong>SHAP (SHapley Additive exPlanations)</strong> calculates the exact fair mathematical contribution of each feature using cooperative game theory:
+        </p>
+        
+        <div style="background:var(--bg-secondary); border:1px solid var(--border-color); border-radius:10px; padding:14px 18px; margin-top:16px; font-family:var(--font-mono); font-size:0.88rem; color:var(--text-primary); display:flex; align-items:center; justify-content:center; gap:12px; flex-wrap:wrap;">
+          <span style="color:var(--text-muted);">Base Population Risk (4.6%)</span>
+          <span style="color:var(--accent-cyan); font-weight:700;">+</span>
+          <span style="color:var(--accent-rose); font-weight:600;">Positive Pushes (+ Risk Factors)</span>
+          <span style="color:var(--accent-blue); font-weight:700;">-</span>
+          <span style="color:var(--accent-green); font-weight:600;">Protective Buffers (- Resilience)</span>
+          <span style="color:#fff; font-weight:700;">=</span>
+          <span style="color:var(--accent-amber); font-weight:700;">Patient's Final Severe Risk</span>
+        </div>
+      </div>
+
+      <!-- LOCAL PATIENT CASE STUDY WATERFALL EXPLORER -->
+      <div class="card" style="margin-bottom:28px;">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px; flex-wrap:wrap; gap:10px;">
+          <div>
+            <h3 style="font-size:1.15rem;">Interactive Patient Waterfall Explanation</h3>
+            <p style="color:var(--text-secondary); font-size:0.85rem;">
+              Select a clinical test case to inspect the exact feature pushes and pulls that dictated the model's decision:
+            </p>
+          </div>
+          <div style="display:flex; gap:8px;">
+            <button class="patient-pill active" onclick="selectShapCase('tp', this)">🚨 Case 1: True Positive Severe Alert</button>
+            <button class="patient-pill" onclick="selectShapCase('fp', this)">⚠️ Case 2: False Positive Alert</button>
+            <button class="patient-pill" onclick="selectShapCase('fn', this)">🔍 Case 3: False Negative (Missed)</button>
+          </div>
+        </div>
+
+        <div class="grid-3" style="margin-bottom:18px;">
+          <div class="metric-pill"><span>Evaluation Case Type:</span><span id="shap-case-type" class="num" style="font-weight:700;">--</span></div>
+          <div class="metric-pill"><span>True Severity Tier:</span><span id="shap-case-true" class="num" style="font-weight:700;">--</span></div>
+          <div class="metric-pill"><span>Model Prediction:</span><span id="shap-case-pred" class="num" style="font-weight:700;">--</span></div>
+        </div>
+
+        <!-- WATERFALL BARS CONTAINER -->
+        <div style="background:var(--bg-secondary); border:1px solid var(--border-color); border-radius:10px; padding:16px;">
+          <div style="display:flex; justify-content:space-between; font-size:0.8rem; color:var(--text-muted); text-transform:uppercase; margin-bottom:12px; border-bottom:1px solid var(--border-color); padding-bottom:8px;">
+            <span style="width:240px;">Feature & Domain</span>
+            <span style="width:110px; text-align:center;">Observed Value</span>
+            <span style="flex:1; text-align:center;">SHAP Impact Direction (Left: Reduces Risk | Right: Increases Risk)</span>
+            <span style="width:90px; text-align:right;">Impact (&Delta;p)</span>
+          </div>
+          <div id="shap-waterfall-rows">
+            <!-- Injected via JavaScript -->
+          </div>
+        </div>
+
+        <div id="shap-case-narrative" style="margin-top:14px; background:rgba(59,130,246,0.08); border:1px solid rgba(59,130,246,0.3); border-radius:8px; padding:14px; font-size:0.85rem; color:var(--text-secondary); line-height:1.5;">
+          <!-- Injected via JavaScript -->
+        </div>
+      </div>
+
+      <!-- GLOBAL BENCHMARKS & DOMAINS -->
       <div class="grid-2">
         <div class="card">
-          <h3 style="font-size:1.1rem; margin-bottom:12px;">Top 15 Predictive Features (TreeSHAP)</h3>
+          <h3 style="font-size:1.1rem; margin-bottom:12px;">Global Population Importance (Top 15 Biomarkers)</h3>
+          <p style="font-size:0.82rem; color:var(--text-secondary); margin-bottom:10px;">Mean absolute impact across all classes (E[|&phi;|]) over the entire cohort.</p>
           <table>
             <thead>
               <tr><th>Rank</th><th>Feature Name</th><th>Clinical Domain</th><th>Mean |SHAP| Impact</th></tr>
@@ -827,6 +890,7 @@ def generate_interactive_dashboard(stage5_results: dict, output_dir: Path):
         </div>
         <div class="card">
           <h3 style="font-size:1.1rem; margin-bottom:12px;">Predictive Attribution by Clinical Domain</h3>
+          <p style="font-size:0.82rem; color:var(--text-secondary); margin-bottom:10px;">Relative information share derived from passive sensors vs. clinical history.</p>
           <table>
             <thead>
               <tr><th>Domain</th><th>Feature Count</th><th>Information Share (%)</th></tr>
@@ -837,6 +901,7 @@ def generate_interactive_dashboard(stage5_results: dict, output_dir: Path):
           </table>
         </div>
       </div>
+
     </div>
 
     <!-- INTENDED USE DISCLAIMER -->
@@ -925,6 +990,76 @@ def generate_interactive_dashboard(stage5_results: dict, output_dir: Path):
           `;
           tbodyDomain.appendChild(tr);
         }});
+      }}
+
+      selectShapCase('tp', null);
+    }}
+
+    function selectShapCase(caseKey, btnElem) {{
+      if (btnElem) {{
+        document.querySelectorAll('#shap .patient-pill').forEach(b => b.classList.remove('active'));
+        btnElem.classList.add('active');
+      }}
+
+      if (!STAGE5_DATA.shap || !STAGE5_DATA.shap.local_explanations) return;
+      const keyMap = {{
+        'tp': 'true_positive_severe_alert',
+        'fp': 'false_positive_severe_alert',
+        'fn': 'false_negative_missed_severe'
+      }};
+      const caseData = STAGE5_DATA.shap.local_explanations[keyMap[caseKey]];
+      if (!caseData) return;
+
+      document.getElementById('shap-case-type').innerText = caseData.case_type;
+      document.getElementById('shap-case-true').innerHTML = `<span class="badge ${{caseData.true_severity_tier === 4 ? 'badge-rose' : 'badge-blue'}}">Tier ${{caseData.true_severity_tier}} (${{caseData.true_severity_tier === 4 ? 'Severe' : (caseData.true_severity_tier === 1 ? 'Mild' : 'Moderate')}})</span>`;
+      document.getElementById('shap-case-pred').innerHTML = `<span class="badge ${{caseData.predicted_severity_tier === 4 ? 'badge-rose' : 'badge-green'}}">Tier ${{caseData.predicted_severity_tier}} (${{caseData.predicted_severity_tier === 4 ? 'Severe' : 'Mild'}})</span>`;
+
+      const container = document.getElementById('shap-waterfall-rows');
+      container.innerHTML = '';
+
+      const features = caseData.top_10_driving_features;
+      let maxImpact = 0.3;
+      features.forEach(f => {{
+        if (Math.abs(f.shap_impact_on_severe) > maxImpact) maxImpact = Math.abs(f.shap_impact_on_severe);
+      }});
+
+      features.forEach(f => {{
+        const row = document.createElement('div');
+        row.style.cssText = 'display:flex; align-items:center; justify-content:space-between; padding:8px 0; border-bottom:1px solid rgba(35, 49, 79, 0.4); font-size:0.83rem;';
+
+        const isPositive = f.shap_impact_on_severe >= 0;
+        const barWidthPct = Math.min(48, (Math.abs(f.shap_impact_on_severe) / maxImpact) * 48);
+
+        row.innerHTML = `
+          <div style="width:240px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">
+            <code>${{f.feature}}</code>
+            <div style="font-size:0.75rem; color:var(--text-muted);">${{f.domain}}</div>
+          </div>
+          <div style="width:110px; text-align:center;" class="num">
+            ${{f.feature_value_scaled > 0 ? '+' : ''}}${{f.feature_value_scaled.toFixed(2)}}&sigma;
+          </div>
+          <div style="flex:1; display:flex; align-items:center; height:22px; position:relative; margin:0 14px; background:rgba(10,14,23,0.6); border-radius:4px;">
+            <div style="position:absolute; left:50%; top:0; bottom:0; width:2px; background:var(--border-color); z-index:2;"></div>
+            ${{isPositive ? `
+              <div style="position:absolute; left:50%; width:${{barWidthPct}}%; height:14px; background:rgba(244,63,94,0.75); border-radius:0 3px 3px 0; box-shadow:0 0 6px rgba(244,63,94,0.4);" title="+${{f.shap_impact_on_severe.toFixed(4)}} pushes risk HIGHER"></div>
+            ` : `
+              <div style="position:absolute; right:50%; width:${{barWidthPct}}%; height:14px; background:rgba(59,130,246,0.75); border-radius:3px 0 0 3px; box-shadow:0 0 6px rgba(59,130,246,0.4);" title="${{f.shap_impact_on_severe.toFixed(4)}} pushes risk LOWER"></div>
+            `}}
+          </div>
+          <div style="width:90px; text-align:right; font-weight:700;" class="num">
+            <span style="color:${{isPositive ? 'var(--accent-rose)' : 'var(--accent-blue)'}};">${{isPositive ? '+' : ''}}${{f.shap_impact_on_severe.toFixed(4)}}</span>
+          </div>
+        `;
+        container.appendChild(row);
+      }});
+
+      const narrativeBox = document.getElementById('shap-case-narrative');
+      if (caseKey === 'tp') {{
+        narrativeBox.innerHTML = `<strong>Clinical Audit Narrative (True Positive):</strong> The model accurately triggered a severe depression alert. As shown in the red bars, acute financial stress (+0.6438) and comorbid chronic neuropathic pain (+0.1256) heavily increased predicted risk, compounded by nocturnal sleep awakenings (+0.0737). The clinician can confirm behavioral and physical vulnerability.`;
+      }} else if (caseKey === 'fp') {{
+        narrativeBox.innerHTML = `<strong>Clinical Audit Narrative (False Positive):</strong> The patient was clinically Mild (Tier 1) but flagged as Severe by the model. The explanation shows that acute physical comorbidities and temporary sleep disruption pushed the model into an over-alert state. In practice, this prompt leads to a nurse check-in without medication escalation.`;
+      }} else {{
+        narrativeBox.innerHTML = `<strong>Clinical Audit Narrative (False Negative):</strong> The patient had Severe Depression (Tier 4), but the model under-predicted (Tier 1). The blue bars show that high educational attainment (-0.5585) and financial stability (-0.1674) acted as strong protective buffers in the model's eyes, masking severe emotional suffering. This highlights why decision thresholds must be tuned to T_4* = 0.2100.`;
       }}
     }}
 
